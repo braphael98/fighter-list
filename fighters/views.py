@@ -1,5 +1,10 @@
-#from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
+from fighters.models import Fighter 
 
 def index(request):
-    return HttpResponse('<h1> FUNCIONOU </h1>')
+    characters = Fighter.objects.all()
+    return render(request, 'fighters/index.html',{"cards": characters})
+
+def page_figher(request, foto_id):
+    character = get_object_or_404(Fighter, pk=foto_id)
+    return render(request, 'fighters/page_figher.html',{"character": character})

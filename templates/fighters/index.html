@@ -1,0 +1,49 @@
+{% extends 'fighters/base.html' %}
+{% block content %}
+
+<section class="conteudo">
+    <section class="banner">
+        <img class="banner__imagem" src="" alt="banner Tekken">
+        <h1 class="banner__titulo">Tekken 8 Lista de personagens</h1>
+    </section>
+    <section class="tags">
+        <p class="tags__titulo">Busque por dificuldade:</p>
+        <ul class="tags__lista">
+            <li class="tags__tag">Facil</li>
+            <li class="tags__tag">Medio</li>
+            <li class="tags__tag">Avançado</li>
+        </ul>
+    </section>
+    <section class="galeria">
+
+        <div class="cards">
+            <h2 class="cards__titulo">Selecione um personagem !</h2>
+            <ul class="cards__lista">
+                {% if cards %} <!--Checagem para garantir se existem cards no meu codigo-->
+                {% for fighter in cards %} <!--Para verificar os parametros, entre em galeria/views.py-->
+                <li class="card">
+                    <a href="">
+                        <img class="card__imagem" src="" alt="foto_do_boneco">
+                    </a>
+                    <span class="card__tag"></span>
+                    <div class="card__info">
+                        <p class="card__titulo">{{ fighter.name }}</p>
+                        <div class="card__texto">
+                            <p class="card__descricao">{{ fighter.description }}</p>
+                            <span>
+                                <img src="" alt="">
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+                {% else %}
+                {% endif %}
+
+            </ul>
+        </div>
+    </section>
+</section>
+</main>
+</div>
+{% endblock %}
