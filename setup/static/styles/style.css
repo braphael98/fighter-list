@@ -1,0 +1,146 @@
+/* Reset básico para margem e padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+/* Container principal */
+.conteudo {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Banner */
+.banner {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.banner__imagem {
+  max-height: 150px; /* diminui a altura máxima para 150px */
+  width: auto;       /* mantém a proporção */
+  margin: 0 auto 15px;
+  display: block;
+}
+
+.banner__titulo {
+  font-size: 2rem;
+  color: #222;
+}
+
+/* Tags de dificuldade */
+.tags {
+  margin-bottom: 25px;
+}
+
+.tags__titulo {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.tags__lista {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.tags__tag {
+  background-color: #007BFF;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.tags__tag:hover {
+  background-color: #0056b3;
+}
+
+/* Galeria e cards */
+.galeria {
+  margin-top: 20px;
+}
+
+.cards__titulo {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.cards__lista {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* Card individual */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card__imagem {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.card__tag {
+  position: absolute; /* se quiser usar, depende do layout */
+  /* Por enquanto, está vazio, então pode ignorar */
+}
+
+.card__info {
+  padding: 10px 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__titulo {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #007BFF;
+}
+
+.card__descricao {
+  font-size: 0.9rem;
+  color: #555;
+  flex-grow: 1;
+}
+
+/* Ajustes gerais para links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+section.banner img.banner__imagem {
+  max-height: 150px !important;
+  width: auto !important;
+  margin: 0 auto 15px !important;
+  display: block !important;
+}

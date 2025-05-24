@@ -1,9 +1,10 @@
 {% extends 'fighters/base.html' %}
+{% load static %}
 {% block content %}
 
 <section class="conteudo">
     <section class="banner">
-        <img class="banner__imagem" src="" alt="banner Tekken">
+        <img class="banner__imagem" src="{% static 'assets/imagens/tekken8-logo.png' %}" alt="banner Tekken">
         <h1 class="banner__titulo">Tekken 8 Lista de personagens</h1>
     </section>
     <section class="tags">
@@ -23,7 +24,7 @@
                 {% for fighter in cards %} <!--Para verificar os parametros, entre em galeria/views.py-->
                 <li class="card">
                     <a href="">
-                        <img class="card__imagem" src="" alt="foto_do_boneco">
+                        <img class="card__imagem" src="{{ fighter.photo.url }}" alt="foto_do_boneco">
                     </a>
                     <span class="card__tag"></span>
                     <div class="card__info">

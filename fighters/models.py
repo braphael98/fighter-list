@@ -11,9 +11,9 @@ class Fighter(models.Model):
     name = models.CharField(max_length= 100, null = False, blank= False)
     description = models.TextField(null = False, blank= False)
     difficulty_level = models.CharField(max_length=100, choices=difficulty_level_choises,default='')
-    
     combo = models.TextField()
-    
+    photo = models.ImageField(upload_to='fighters/', null=True, blank=True)
+
     def __str__(self):
         return self.name
 
