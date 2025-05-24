@@ -27,8 +27,8 @@ body {
 }
 
 .banner__imagem {
-  max-height: 150px; /* diminui a altura máxima para 150px */
-  width: auto;       /* mantém a proporção */
+  max-height: 150px; 
+  width: auto;      
   margin: 0 auto 15px;
   display: block;
 }
@@ -81,12 +81,10 @@ body {
 }
 
 .cards__lista {
-  list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Ajuste a largura aqui */
   gap: 20px;
 }
-
 /* Card individual */
 .card {
   background-color: white;
@@ -95,6 +93,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  align-items: center; /* Centraliza a imagem e conteúdo */
   transition: transform 0.2s ease;
 }
 
@@ -104,8 +103,9 @@ body {
 
 .card__imagem {
   width: 100%;
-  height: 140px;
-  object-fit: cover;
+  height: 500px; /* Tamanho médio padrão */
+  object-fit: cover; /* Corta o excesso, mantendo o centro da imagem */
+  display: block;
 }
 
 .card__tag {
@@ -114,10 +114,10 @@ body {
 }
 
 .card__info {
-  padding: 10px 15px;
-  flex-grow: 1;
+  padding: 15px;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .card__titulo {
@@ -128,9 +128,10 @@ body {
 }
 
 .card__descricao {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #555;
-  flex-grow: 1;
+  line-height: 1.4;
+  word-break: normal;
 }
 
 /* Ajustes gerais para links */
