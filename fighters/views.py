@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from fighters.models import Fighter 
 
 def index(request):
-    characters = Fighter.objects.all()
+    characters = Fighter.objects.filter(published=True)
     return render(request, 'fighters/index.html',{"cards": characters})
 
 def page_figher(request, foto_id):

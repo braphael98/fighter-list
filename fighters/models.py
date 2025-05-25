@@ -13,6 +13,7 @@ class Fighter(models.Model):
     difficulty_level = models.CharField(max_length=100, choices=difficulty_level_choises,default='')
     combo = models.TextField()
     photo = models.ImageField(upload_to='fighters/', null=True, blank=True)
+    published = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
